@@ -23,7 +23,7 @@
   // Fetch the book data from the backend when the component is mounted
   onMounted(async () => {
     try {
-      const response = await axios.get(`http://127.0.0.1:5000/user_book/${bookTitle}`);
+      const response = await axios.get(`http://127.0.0.1:10000/user_book/${bookTitle}`);
       console.log(response)
       book.value = response.data.book;
 

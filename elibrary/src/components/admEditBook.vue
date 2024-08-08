@@ -62,8 +62,8 @@
   const Content = ref("");
   const For_Section = ref("");
  
-  // const url1=`http://127.0.0.1:5000/admin_section/${Book_id}`;
-  const url2=`http://127.0.0.1:5000/admin_book/${Book_id}`;
+  // const url1=`http://127.0.0.1:10000/admin_section/${Book_id}`;
+  const url2=`http://127.0.0.1:10000/admin_book/${Book_id}`;
 
   function fetchBookdata(){
     console.log(url2)
@@ -73,7 +73,7 @@
 
     // Set up Axios with the token in the headers
     const axiosInstance = axios.create({
-        baseURL: 'http://127.0.0.1:5000', 
+        baseURL: 'http://127.0.0.1:10000', 
         headers: {
             'Authorization': `Bearer ${token}`
         }
@@ -113,7 +113,7 @@
 
     // Set up Axios with the token in the headers
     const axiosInstance = axios.create({
-        baseURL: 'http://127.0.0.1:5000', // Your API server's URL
+        baseURL: 'http://127.0.0.1:10000', // Your API server's URL
         headers: {
             'Authorization': `Bearer ${token}`
         }
