@@ -72,7 +72,7 @@
     router.push('/loginPage');
   }
   function onRegister() {
-    const url = "https://0.0.0.0:10000/register";
+    const url = "https://lmapp-x3ay.onrender.com//register";
     console.log(url);
     const data = {
       First_Name: fname.value,

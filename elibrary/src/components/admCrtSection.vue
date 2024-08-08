@@ -78,7 +78,7 @@
   
       // Set up Axios with the token in the headers
       const axiosInstance = axios.create({
-          baseURL: 'https://0.0.0.0:10000', // Your API server's URL
+          baseURL: 'https://lmapp-x3ay.onrender.com/', // Your API server's URL
           headers: {
               'Authorization': `Bearer ${token}`
           }

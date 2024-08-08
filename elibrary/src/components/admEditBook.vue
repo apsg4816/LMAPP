@@ -62,8 +62,8 @@
   const Content = ref("");
   const For_Section = ref("");
  
-  // const url1=`https://0.0.0.0:10000/admin_section/${Book_id}`;
-  const url2=`https://0.0.0.0:10000/admin_book/${Book_id}`;
+  // const url1=`https://lmapp-x3ay.onrender.com//admin_section/${Book_id}`;
+  const url2=`https://lmapp-x3ay.onrender.com//admin_book/${Book_id}`;
 
   function fetchBookdata(){
     console.log(url2)
@@ -73,7 +73,7 @@
 
     // Set up Axios with the token in the headers
     const axiosInstance = axios.create({
-        baseURL: 'https://0.0.0.0:10000', 
+        baseURL: 'https://lmapp-x3ay.onrender.com/', 
         headers: {
             'Authorization': `Bearer ${token}`
         }
@@ -113,7 +113,7 @@
 
     // Set up Axios with the token in the headers
     const axiosInstance = axios.create({
-        baseURL: 'https://0.0.0.0:10000', // Your API server's URL
+        baseURL: 'https://lmapp-x3ay.onrender.com/', // Your API server's URL
         headers: {
             'Authorization': `Bearer ${token}`
         }

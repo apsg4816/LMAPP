@@ -86,13 +86,13 @@ function viewContent(Book_Title){
 
 function returnBook(requestId){
     if (window.confirm("Do you really want to return this Book ?")){
-    const url = `https://0.0.0.0:10000/book_request/${requestId}`;
+    const url = `https://lmapp-x3ay.onrender.com//book_request/${requestId}`;
     const data = {'ReqStatus': 'Returned'};
     const token = localStorage.getItem('token');
 
     // Set up Axios with the token in the headers
     const axiosInstance = axios.create({
-        baseURL: 'https://0.0.0.0:10000',
+        baseURL: 'https://lmapp-x3ay.onrender.com/',
         headers: {
             'Authorization': `Bearer ${token}`
         }
@@ -121,12 +121,12 @@ function fetchRequestedData() {
         user_name.value = JSON.parse(storedData2);
     }else{ router.push('/loginPage')}
 
-    const url = `https://0.0.0.0:10000/book_request`;
+    const url = `https://lmapp-x3ay.onrender.com//book_request`;
     
     const token = localStorage.getItem('token');
     // Set up Axios with the token in the headers
     const axiosInstance = axios.create({
-        baseURL: 'https://0.0.0.0:10000', // Your API server's URL
+        baseURL: 'https://lmapp-x3ay.onrender.com/', // Your API server's URL
         headers: {
             'Authorization': `Bearer ${token}`
         }

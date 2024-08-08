@@ -55,7 +55,7 @@ const DateCreated = ref('');
 
 const Description = ref('');
 
-const url1 = `https://0.0.0.0:10000/admin_section/${Section_id}`;
+const url1 = `https://lmapp-x3ay.onrender.com//admin_section/${Section_id}`;
 
 // Function to fetch venue details and populate the form fields
 const fetchSectionDetails = async () => {
@@ -63,7 +63,7 @@ const fetchSectionDetails = async () => {
 
     // Set up Axios with the token in the headers
     const axiosInstance = axios.create({
-        baseURL: 'https://0.0.0.0:10000', // Your API server's URL
+        baseURL: 'https://lmapp-x3ay.onrender.com/', // Your API server's URL
         headers: {
             'Authorization': `Bearer ${token}`
         }
@@ -102,7 +102,7 @@ const editSection = () => {
 
     // Set up Axios with the token in the headers
     const axiosInstance = axios.create({
-        baseURL: 'https://0.0.0.0:10000', // Your API server's URL
+        baseURL: 'https://lmapp-x3ay.onrender.com/', // Your API server's URL
         headers: {
             'Authorization': `Bearer ${token}`
         }

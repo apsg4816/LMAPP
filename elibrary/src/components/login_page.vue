@@ -51,7 +51,7 @@ function goToRegister() {
 
 function onLogin() {
 
-  const url = "https://0.0.0.0:10000/login";
+  const url = "https://lmapp-x3ay.onrender.com//login";
   const data = {
     email: email.value,
     password: password.value
