@@ -70,7 +70,7 @@ const user_name = ref('')
 
 function submitFeedback() {
 
-    const url = "http://127.0.0.1:10000/user_feedback";
+    const url = "http://0.0.0.0:10000/user_feedback";
     const data = {
         Book_Rating: Book_Rating.value,
         user_name: user_name.value,
@@ -91,7 +91,7 @@ function submitFeedback() {
 
     // Set up Axios with the token in the headers
     const axiosInstance = axios.create({
-        baseURL: 'http://127.0.0.1:10000', // Your API server's URL
+        baseURL: 'http://0.0.0.0:10000', // Your API server's URL
         headers: {
             'Authorization': `Bearer ${token}`
         }
@@ -129,12 +129,12 @@ function BookDetailsForRequest() {
 
     console.log(BookId)
     console.log(user_name.value)
-    const url = `http://127.0.0.1:10000/user_book/${BookId}`;
+    const url = `http://0.0.0.0:10000/user_book/${BookId}`;
 
     const token = localStorage.getItem('token');
     // Set up Axios with the token in the headers
     const axiosInstance = axios.create({
-        baseURL: 'http://127.0.0.1:10000',
+        baseURL: 'http://0.0.0.0:10000',
         headers: {
             'Authorization': `Bearer ${token}`
         }

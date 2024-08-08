@@ -44,13 +44,13 @@
   
          // Set up Axios with the token in the headers
         const axiosInstance = axios.create({
-        baseURL: 'http://127.0.0.1:10000', // Your API server's URL
+        baseURL: 'http://0.0.0.0:10000', // Your API server's URL
         headers: {
             'Authorization': `Bearer ${token}`
         }
     });
 
-        const url = "http://127.0.0.1:10000/book_request";
+        const url = "http://0.0.0.0:10000/book_request";
         const response = await axiosInstance.get(url);
         console.log(response.data.bookReq)
         renderChart(response.data.bookReq);

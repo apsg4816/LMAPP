@@ -78,7 +78,7 @@
   
       // Set up Axios with the token in the headers
       const axiosInstance = axios.create({
-          baseURL: 'http://127.0.0.1:10000',
+          baseURL: 'http://0.0.0.0:10000',
           headers: {
               'Authorization': `Bearer ${token}`
           }

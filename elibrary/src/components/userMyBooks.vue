@@ -86,13 +86,13 @@ function viewContent(Book_Title){
 
 function returnBook(requestId){
     if (window.confirm("Do you really want to return this Book ?")){
-    const url = `http://127.0.0.1:10000/book_request/${requestId}`;
+    const url = `http://0.0.0.0:10000/book_request/${requestId}`;
     const data = {'ReqStatus': 'Returned'};
     const token = localStorage.getItem('token');
 
     // Set up Axios with the token in the headers
     const axiosInstance = axios.create({
-        baseURL: 'http://127.0.0.1:10000',
+        baseURL: 'http://0.0.0.0:10000',
         headers: {
             'Authorization': `Bearer ${token}`
         }
@@ -121,12 +121,12 @@ function fetchRequestedData() {
         user_name.value = JSON.parse(storedData2);
     }else{ router.push('/loginPage')}
 
-    const url = `http://127.0.0.1:10000/book_request`;
+    const url = `http://0.0.0.0:10000/book_request`;
     
     const token = localStorage.getItem('token');
     // Set up Axios with the token in the headers
     const axiosInstance = axios.create({
-        baseURL: 'http://127.0.0.1:10000', // Your API server's URL
+        baseURL: 'http://0.0.0.0:10000', // Your API server's URL
         headers: {
             'Authorization': `Bearer ${token}`
         }

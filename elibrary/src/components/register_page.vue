@@ -72,7 +72,7 @@
     router.push('/loginPage');
   }
   function onRegister() {
-    const url = "http://127.0.0.1:10000/register";
+    const url = "http://0.0.0.0:10000/register";
     console.log(url);
     const data = {
       First_Name: fname.value,

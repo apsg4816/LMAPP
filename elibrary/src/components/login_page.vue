@@ -51,7 +51,7 @@ function goToRegister() {
 
 function onLogin() {
 
-  const url = "http://127.0.0.1:10000/login";
+  const url = "http://0.0.0.0:10000/login";
   const data = {
     email: email.value,
     password: password.value
