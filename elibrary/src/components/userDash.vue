@@ -106,9 +106,9 @@
     const First_Name = ref('')
     // const buttonNotShown= ref(true)
   
-    const url1 = "http://0.0.0.0:10000/admin_section";
-    const url2 = "http://0.0.0.0:10000/admin_book";
-    const url3 = "http://0.0.0.0:10000/section_book_search";
+    const url1 = "https://0.0.0.0:10000/admin_section";
+    const url2 = "https://0.0.0.0:10000/admin_book";
+    const url3 = "https://0.0.0.0:10000/section_book_search";
   
     let keyword = ref('');
     let selectedFilter = '';
@@ -137,7 +137,7 @@
       if(is_Searching== true){
           const token = localStorage.getItem('token');
           const axiosInstance = axios.create({
-          baseURL: 'http://0.0.0.0:10000',
+          baseURL: 'https://0.0.0.0:10000',
           headers: {
               'Authorization': `Bearer ${token}`
           }
@@ -192,12 +192,12 @@
   }
    
   function bookStatus(){
-    const url = `http://0.0.0.0:10000/book_request`;
+    const url = `https://0.0.0.0:10000/book_request`;
   
   const token = localStorage.getItem('token');
   // Set up Axios with the token in the headers
   const axiosInstance = axios.create({
-      baseURL: 'http://0.0.0.0:10000',
+      baseURL: 'https://0.0.0.0:10000',
       headers: {
           'Authorization': `Bearer ${token}`
       }
@@ -271,7 +271,7 @@
   
       const token = localStorage.getItem('token');
       const axiosInstance = axios.create({
-        baseURL: 'http://0.0.0.0:10000',
+        baseURL: 'https://0.0.0.0:10000',
         headers: {
           'Authorization': `Bearer ${token}`
         }

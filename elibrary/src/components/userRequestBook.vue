@@ -64,7 +64,7 @@
   console.log(email.value)
   function requestBook() {
   
-  const url = "http://0.0.0.0:10000/book_request";
+  const url = "https://0.0.0.0:10000/book_request";
   const data = {
     Ndays: Ndays.value,
     user_name: store.getters.getuser_name,
@@ -85,7 +85,7 @@
   
     // Set up Axios with the token in the headers
     const axiosInstance = axios.create({
-        baseURL: 'http://0.0.0.0:10000', // Your API server's URL
+        baseURL: 'https://0.0.0.0:10000', // Your API server's URL
         headers: {
             'Authorization': `Bearer ${token}`
         }
@@ -115,12 +115,12 @@
   function BookDetailsForRequest() {
     let BookId = store.getters.getBook_ID;
     console.log(BookId)
-    const url = `http://0.0.0.0:10000/user_book/${BookId}`;
+    const url = `https://0.0.0.0:10000/user_book/${BookId}`;
 
     const token = localStorage.getItem('token');
     // Set up Axios with the token in the headers
     const axiosInstance = axios.create({
-        baseURL: 'http://0.0.0.0:10000', // Your API server's URL
+        baseURL: 'https://0.0.0.0:10000', // Your API server's URL
         headers: {
             'Authorization': `Bearer ${token}`
         }
@@ -144,7 +144,7 @@
   
 <style scoped>
 
-  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+  @import url('httpss://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
   
   /* * {
     margin: 0;

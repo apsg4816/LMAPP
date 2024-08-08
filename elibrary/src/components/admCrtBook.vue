@@ -78,7 +78,7 @@
   
       // Set up Axios with the token in the headers
       const axiosInstance = axios.create({
-          baseURL: 'http://0.0.0.0:10000',
+          baseURL: 'https://0.0.0.0:10000',
           headers: {
               'Authorization': `Bearer ${token}`
           }
@@ -100,7 +100,7 @@
 
 </script>
   <style scoped>
-  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+  @import url('httpss://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
   * {
     margin: 0;
     padding: 0;

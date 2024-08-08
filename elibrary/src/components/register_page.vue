@@ -72,7 +72,7 @@
     router.push('/loginPage');
   }
   function onRegister() {
-    const url = "http://0.0.0.0:10000/register";
+    const url = "https://0.0.0.0:10000/register";
     console.log(url);
     const data = {
       First_Name: fname.value,
@@ -102,7 +102,7 @@
   </script>
   
   <style scoped>
-  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+  @import url('httpss://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
   
   * {
     margin: 0;

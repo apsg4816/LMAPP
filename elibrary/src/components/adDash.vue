@@ -121,9 +121,9 @@ const noSectionsFound = ref('');
 const noBooksFound = ref('');
 let is_Searching = false;
 
-const url1 = "http://0.0.0.0:10000/admin_section";
-const url2 = "http://0.0.0.0:10000/admin_book";
-const url3 = "http://0.0.0.0:10000/section_book_search";
+const url1 = "https://0.0.0.0:10000/admin_section";
+const url2 = "https://0.0.0.0:10000/admin_book";
+const url3 = "https://0.0.0.0:10000/section_book_search";
 
 let keyword = ref('');
 let selectedFilter = '';
@@ -138,7 +138,7 @@ function search(keyword) {
   if (is_Searching == true) {
     const token = localStorage.getItem('token');
     const axiosInstance = axios.create({
-      baseURL: 'http://0.0.0.0:10000',
+      baseURL: 'https://0.0.0.0:10000',
       headers: {
         'Authorization': `Bearer ${token}`
       }
@@ -218,7 +218,7 @@ function deleteSection(id) {
   if (window.confirm("Do you really want to delete this Section?")) {
     const token = localStorage.getItem('token');
     const axiosInstance = axios.create({
-      baseURL: 'http://0.0.0.0:10000',
+      baseURL: 'https://0.0.0.0:10000',
       headers: {
         'Authorization': `Bearer ${token}`
       }
@@ -239,7 +239,7 @@ function deleteBook(id) {
   if (window.confirm("Do you really want to delete this Book?")) {
     const token = localStorage.getItem('token');
     const axiosInstance = axios.create({
-      baseURL: 'http://0.0.0.0:10000',
+      baseURL: 'https://0.0.0.0:10000',
       headers: {
         'Authorization': `Bearer ${token}`
       }
@@ -260,7 +260,7 @@ function exportLibraryData() {
   if (window.confirm("Do you really want to export books data?")) {
     const token = localStorage.getItem('token');
     const axiosInstance = axios.create({
-      baseURL: 'http://0.0.0.0:10000',
+      baseURL: 'https://0.0.0.0:10000',
       headers: { 'Authorization': `Bearer ${token}` },
       responseType: 'blob',
     });
@@ -286,12 +286,12 @@ function exportLibraryData() {
 const fetchData = () => {
   const token = localStorage.getItem('token');
   const axiosInstance = axios.create({
-    baseURL: 'http://0.0.0.0:10000',
+    baseURL: 'https://0.0.0.0:10000',
     headers: {
       'Authorization': `Bearer ${token}`
     }
   });
-  axiosInstance.get('http://0.0.0.0:10000/admin_section')
+  axiosInstance.get('https://0.0.0.0:10000/admin_section')
     .then(response => {
       items_sections.value = response.data.sections;
       if (response.data.sections.length === 0) {
@@ -304,7 +304,7 @@ const fetchData = () => {
     .catch(error => {
       console.log(error);
     });
-  axiosInstance.get('http://0.0.0.0:10000/admin_book')
+  axiosInstance.get('https://0.0.0.0:10000/admin_book')
     .then(response => {
       items_books.value = response.data.books;
       if (response.data.books.length === 0) {

@@ -51,7 +51,7 @@ function goToRegister() {
 
 function onLogin() {
 
-  const url = "http://0.0.0.0:10000/login";
+  const url = "https://0.0.0.0:10000/login";
   const data = {
     email: email.value,
     password: password.value
@@ -89,7 +89,7 @@ function onLogin() {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('httpss://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
 * {
   margin: 0;

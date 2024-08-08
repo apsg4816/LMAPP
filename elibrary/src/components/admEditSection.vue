@@ -55,7 +55,7 @@ const DateCreated = ref('');
 
 const Description = ref('');
 
-const url1 = `http://0.0.0.0:10000/admin_section/${Section_id}`;
+const url1 = `https://0.0.0.0:10000/admin_section/${Section_id}`;
 
 // Function to fetch venue details and populate the form fields
 const fetchSectionDetails = async () => {
@@ -63,7 +63,7 @@ const fetchSectionDetails = async () => {
 
     // Set up Axios with the token in the headers
     const axiosInstance = axios.create({
-        baseURL: 'http://0.0.0.0:10000', // Your API server's URL
+        baseURL: 'https://0.0.0.0:10000', // Your API server's URL
         headers: {
             'Authorization': `Bearer ${token}`
         }
@@ -102,7 +102,7 @@ const editSection = () => {
 
     // Set up Axios with the token in the headers
     const axiosInstance = axios.create({
-        baseURL: 'http://0.0.0.0:10000', // Your API server's URL
+        baseURL: 'https://0.0.0.0:10000', // Your API server's URL
         headers: {
             'Authorization': `Bearer ${token}`
         }
@@ -127,7 +127,7 @@ onMounted(() => {
 
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('httpss://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
 * {
     margin: 0;
